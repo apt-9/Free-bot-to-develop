@@ -1,7 +1,8 @@
-const { MessageEmbed, IntegrationApplication } = require('discord.js');
+const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: 'ping',
+    permissions: ['ADMINISTRATOR', 'KICK_MEMBERS'],
     description: 'Commande ping!',
     async run (client, message, args) {
         const tryPong = await message.channel.send('On essaie de pong.... un instant!');

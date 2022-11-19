@@ -12,6 +12,9 @@ module.exports = {
         const cmdName = args.shift().toLowerCase();
         if (cmdName.length == 0) return;
         let cmd = client.commands.get(cmdName);
+
+        if(!message.member.permissions.has([cmd.permissions])) return message.reply(`Vous n'avez pas la/les permission(s) requise(s) (\`${cmd.permissions.join(', ')}\`) pour taper cette commande!`);
+
         if (cmd) cmd.run(client, message, args);
     },
 };

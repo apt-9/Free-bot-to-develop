@@ -2,6 +2,7 @@ const { MessageEmbed } = require('discord.js');
 
 module.exports = {
     name: 'poll',
+    permissions: ['ADMINISTRATOR'],
     description: 'Poster votre sondage',
     async run (client, message, args) {
         if (!args[0]) return message.reply('Merci d\'entrer une question pour votre sondage');
