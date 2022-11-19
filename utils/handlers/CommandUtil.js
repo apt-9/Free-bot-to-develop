@@ -10,6 +10,8 @@ module.exports = async (client) => {
         client.commands.set(cmd.name, cmd);
         console.log(`Commande chargée: ${cmd.name}`);
 
+        if (!cmd.category) return console.log(`-----\nCommande non-chargée: pas de catégorie\nFichier -> ${cmdFile}\n-----`)
+
         if (!cmd.permissions) return console.log(`-----\nCommande non-chargée: pas de permission\nFichier -> ${cmdFile}\n-----`)
 
         cmd.permissions.forEach(permission => {
