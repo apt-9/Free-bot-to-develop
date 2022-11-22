@@ -1,8 +1,10 @@
+const Logger = require('../../utils/Logger');
+
 module.exports = {
     name: 'ready',
     once: true,
     async execute(client) {
-        console.log('Je suis prêt');
+        Logger.client(' - prêt à être utilisé');
 
 
         // Instantané 
