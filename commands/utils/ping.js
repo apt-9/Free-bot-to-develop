@@ -4,6 +4,9 @@ module.exports = {
     name: 'ping',
     category:'utils',
     permissions: ['ADMINISTRATOR', 'KICK_MEMBERS'],
+    ownerOnly: false,
+    usage: 'ping',
+    examples: ['ping'],
     description: 'Commande ping!',
     async run (client, message, args) {
         const tryPong = await message.channel.send('On essaie de pong.... un instant!');
